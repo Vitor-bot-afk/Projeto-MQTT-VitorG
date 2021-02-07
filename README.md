@@ -30,4 +30,4 @@ Ultilizamos bibliotecas de software para funções especificas do Arduino, ultil
 
 * [PubsubClient](https://github.com/knolleary/pubsubclient).
 
-**Autor: Vitor Gomes**
+**Vitor Gomes**
