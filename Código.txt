@@ -57,12 +57,12 @@ mqttClient.connect("VitorGomes");
    
 
     if(estado_sensor == 1 ){
-         mensagem = mqttClient.publish("LAB-11", "ABERTA");  
+         mensagem = mqttClient.publish("LAB-11", "ABERTO");  
         Serial.println(mensagem);
     }
   
    else{
-        mensagem = mqttClient.publish("LAB-11", "FECHADA"); 
+        mensagem = mqttClient.publish("LAB-11", "FECHADO"); 
         Serial.println(mensagem);
     }
 
