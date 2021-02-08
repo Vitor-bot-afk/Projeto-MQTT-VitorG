@@ -44,31 +44,28 @@ void setup() {
     Serial.println("");
     pinMode(pino2, INPUT_PULLUP); //Define o pino 2 com entrada
     
-    delay(3000);
-
-}
+ }
 
 void loop() { 
-mqttClient.connect("VitorGomes");
+mqttClient.connect("vitorgomes");
 
  estado_sensor = digitalRead(pino2); 
 
 
    
-
     if(estado_sensor == 1 ){
-         mensagem = mqttClient.publish("LAB-11", "ABERTO");  
-        Serial.println(mensagem);
+         mensagem = mqttClient.publish("lab-11", "ABERTA");  
+        Serial.println("RACK ABERTO");
     }
   
    else{
-        mensagem = mqttClient.publish("LAB-11", "FECHADO"); 
-        Serial.println(mensagem);
+        mensagem = mqttClient.publish("lab-11", "FECHADA"); 
+        Serial.println("RACK FECHADA");
     }
 
 
 
 
  mqttClient.loop();
- delay(500);
+ 
 }
